@@ -16,6 +16,7 @@
         "typescript": "^5.8.2"
     },
     "dependencies": {
+        "@trpc/server": "^10.45.2",
         "express": "^4.21.2"
     }
 }

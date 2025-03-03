@@ -1,6 +1,6 @@
 import React from "react";
 
-const miniNotes = [
+const notes = [
   {
     noteKey: "note-key-1",
     title: "Test title",
@@ -25,18 +25,16 @@ export const App = () => {
   return (
     <main>
       <h1>My note</h1>
-      <ul>
-        {
-          miniNotes.map((item) => {
-            return (
-              <li key={item.noteKey}>
-                <a href={item.link}>{item.title}</a>
-                <p>{item.description}</p>
-              </li>
-            )
-          })
-        }
-      </ul>
+      {
+        notes.map((item) => {
+          return (
+            <article key={item.noteKey}>
+              <a href={item.link}>{item.title}</a>
+              <p>{item.description}</p>
+            </article>
+          )
+        })
+      }
     </main>
   );
 }
